@@ -10,18 +10,17 @@ type Tomato = {
   rotation: number;
 };
 
-const FallingTomatoes =() => {
+const FallingTomatoes = () => {
   const [tomatoes, setTomatoes] = useState<Tomato[]>([]);
 
   useEffect(() => {
-    // Generate random tomatoes
     const newTomatoes = Array.from({ length: 15 }, (_, i) => ({
       id: i,
-      x: Math.random() * 100, // random horizontal position (%)
-      size: Math.random() * 30 + 20, // random size between 20-50px
-      delay: Math.random() * 5, // random delay before animation starts
-      duration: Math.random() * 10 + 10, // random duration between 10-20s
-      rotation: Math.random() * 360, // random initial rotation
+      x: Math.random() * 100,
+      size: Math.random() * 30 + 20,
+      delay: Math.random() * 5,
+      duration: Math.random() * 10 + 10,
+      rotation: Math.random() * 360,
     }));
 
     setTomatoes(newTomatoes);
@@ -58,6 +57,6 @@ const FallingTomatoes =() => {
       ))}
     </div>
   );
-}
+};
 
 export default FallingTomatoes;

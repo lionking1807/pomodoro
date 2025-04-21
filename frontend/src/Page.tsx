@@ -55,9 +55,9 @@ const LandingPage = () => {
           </motion.div>
         </div>
 
-        <h1 className="text-3xl font-bold text-center text-pink-600 mb-2 flex items-center justify-center gap-2">
+        <h1 className="text-lg font-bold text-center text-pink-600 mb-2 flex items-center justify-center gap-2">
           <Heart className="w-6 h-6 fill-pink-400 text-pink-400" />
-          Pomodoro Timer
+          Focus for 25 minutes, then take a break!
           <Heart className="w-6 h-6 fill-pink-400 text-pink-400" />
         </h1>
 
@@ -75,7 +75,7 @@ const LandingPage = () => {
 
           <Button
             onClick={handleStart}
-            className="w-full bg-pink-500 hover:bg-pink-600 text-white rounded-xl font-medium py-2 transition-all duration-200 flex items-center justify-center gap-2"
+            className="w-full bg-pink-500 hover:bg-pink-600 text-white rounded-xl font-medium py-2 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
           >
             Start Pomodoro
             <motion.div
@@ -93,9 +93,7 @@ const LandingPage = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         className="text-pink-600 mt-6 text-sm"
-      >
-        Focus for 25 minutes, then take a break! 💖
-      </motion.p>
+      ></motion.p>
     </div>
   );
 };

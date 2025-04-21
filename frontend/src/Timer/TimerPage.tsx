@@ -160,7 +160,7 @@ const TimerPage = () => {
               onClick={goHome}
               variant="outline"
               size="icon"
-              className="rounded-full w-12 h-12 border-pink-300 text-pink-600"
+              className="rounded-full w-12 h-12 border-pink-300 text-pink-600 cursor-pointer"
             >
               <Home className="h-5 w-5" />
             </Button>
@@ -177,7 +177,7 @@ const TimerPage = () => {
             <p className="text-pink-600 mb-4">Great job! Take a break now.</p>
             <Button
               onClick={resetTimer}
-              className="bg-pink-500 hover:bg-pink-600 text-white rounded-xl"
+              className="bg-pink-500 hover:bg-pink-600 text-white rounded-xl cursor pointer"
             >
               Start Another Pomodoro
             </Button>
