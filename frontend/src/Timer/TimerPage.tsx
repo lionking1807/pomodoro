@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Heart, PauseCircle, PlayCircle, RotateCcw, Home } from "lucide-react";
 
 const TimerPage = () => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const taskName = searchParams.get("task") || "My Task";
 
   const [timeLeft, setTimeLeft] = useState(25 * 60);
@@ -75,7 +75,7 @@ const TimerPage = () => {
   };
 
   const goHome = () => {
-    router.push("/");
+    navigate("/");
   };
 
   return (

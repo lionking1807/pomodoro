@@ -24,7 +24,7 @@ const LandingPage = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="z-10 bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-lg border border-pink-200 max-w-md w-full"
+        className="z-10 bg-white/80 backdrop-blur-sm p-8 rounded-3xl max-w-md w-full relative before:absolute before:inset-0 before:rounded-3xl before:p-[2px] before:bg-gradient-to-r before:from-pink-300 before:via-purple-200 before:to-pink-300 before:-z-10 after:absolute after:inset-0 after:rounded-3xl after:p-[1px] after:bg-white/50 after:-z-10 shadow-[0_10px_40px_-15px_rgba(236,72,153,0.3)]"
       >
         <div className="flex justify-center mb-6">
           <motion.div
@@ -61,18 +61,8 @@ const LandingPage = () => {
           <Heart className="w-6 h-6 fill-pink-400 text-pink-400" />
         </h1>
 
-        <p className="text-center text-pink-500 mb-6">
-          Stay focused with a cute timer!
-        </p>
-
         <div className="space-y-4">
           <div>
-            <label
-              htmlFor="task"
-              className="block text-sm font-medium text-pink-600 mb-1"
-            >
-              What are you working on?
-            </label>
             <Input
               id="task"
               type="text"

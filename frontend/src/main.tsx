@@ -1,10 +1,23 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom"; // Assure-toi d'importer BrowserRouter
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Page from "./Page";
 import "./index.css";
+import TimerPage from "./Timer/TimerPage";
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Page />,
+  },
+  {
+    path:'/timer',
+    element: <TimerPage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <Page />
-  </BrowserRouter>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
